@@ -1,0 +1,127 @@
+
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			li{
+				list-style: none;
+			}
+			
+			a{
+				text-decoration: none;
+			}
+			
+			img{
+				display: block;
+			}
+			
+			button{
+				border: 0;
+				outline: 0;
+			}
+			.box{
+				width:100%;
+				height: 300px;
+				position: relative;
+				margin-top: 50px;
+			}
+			
+			.img-list{
+				width: 1200px;
+				height: 100%;
+				
+				margin: 0 auto;
+				
+				position: relative;
+				
+				overflow: hidden;
+			}
+			
+			.img-list li{
+				width: 750px;
+				height: 300px;
+				
+				position: absolute;
+				top: 0;
+				left: 0;
+				
+				transition: all 0.3s;
+			}
+			.img-list>a{
+				display: block;
+			}
+			
+			.img-list img{
+				width: 100%;
+			}
+			
+			.img-list li.one{
+				transform: translateX(-300px) scale(0.8);
+				/* z-index是设置层级的：只有在当前元素设置了定位后才会有效 */
+				z-index: 0;
+			}
+			
+			.img-list li.two{
+				transform: translateX(-75px) scale(0.8);
+				/* z-index是设置层级的：只有在当前元素设置了定位后才会有效 */
+				z-index: 1;
+			}
+			
+			.img-list li.three{
+				transform: translateX(225px) scale(1);
+				/* z-index是设置层级的：只有在当前元素设置了定位后才会有效 */
+				z-index: 2;
+			}
+			
+			.img-list li.four{
+				transform: translateX(600px) scale(0.8);
+				/* z-index是设置层级的：只有在当前元素设置了定位后才会有效 */
+				z-index:1;
+			}
+			
+			.img-list li.five,.img-list li.six,	.img-list li.seven{
+				transform: translateX(900px) scale(0.8);
+				/* z-index是设置层级的：只有在当前元素设置了定位后才会有效 */
+				z-index:0;
+			}
+			
+			.btn{
+				width: 40px;
+				height: 60px;
+				border: 1px solid #ccc;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			
+			.btn:hover{
+				background-color: #999;
+				color: white;
+			}
+			
+			.btn-right{
+				right: 0;
+			}.pointer{
+	position: absolute;
+	left: 500px;
+	bottom: 20px;
+	width: 120px;
+	height: 10px;
+	
+	
+}
+.pointer>span{
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	background-color: rgba(255,255,255,0.3);
+	border-radius: 50%;
+	z-index: 5;
+}
+.pointer>span.active,.pointer>span:hover{
+	background-color: white;
+	/* box-shadow(x轴偏移,y轴偏移,模糊程度,大小,颜色) */
+	box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+}
+		
